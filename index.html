@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <title>Corporation Idle</title>
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event,'overview')" id="default">Overview</button>
+        <button class="tablinks" onclick="openTab(event,'labor')">Labor</button>
+        <button class="tablinks" onclick="openTab(event,'production')">Production</button>
+        <button class="tablinks" onclick="openTab(event,'investment')">Investment</button>
+        <button class="tablinks" onclick="openTab(event,'research')">Research</button>
+        <button class="tablinks" onclick="openTab(event,'settings')">Settings</button>
+    </div>
+
+    <div id="labor" class="tabcontent">
+        <h3>Here you can check up on your workforce</h3>
+        <h4>Idle Employees</h4>
+        <p><span id="idlCt">0</span> <button class="upgrade" onclick="hire(1)">Hire someone!</button></p>
+        <p>Idle employees need a job! Assign them to any of the jobs below to start making money! (Note that all employees also draw a salary.)</p>
+        <h4>Engineers</h4>
+        <p><button type="button" class="minus" onclick="assign('engCt',-1)" style="display:none;">-</button> <span id="engCt">0</span> <button type="button" class="plus" onclick="assign('engCt',1)" style="display:none;">+</button></p>
+        <h4>Managers</h4>
+        <p id="mgrCt">0</p>
+        <h4>Programmers</h4>
+        <p id="proCt">0</p>
+        <h4>Investors</h4>
+        <p id="invCt">0</p>
+        <h4>Sales associates</h4>
+        <p id="salCt">0</p>
+    </div>
+
+    <div id="overview" class="tabcontent">
+        <h3>Here you can see how <span id="cn">mePear</span> is doing</h3>
+        <p>Net worth: $<span id="bal">0.00</span></p>
+        <p>Liquid assets: $<span id="cash">0.00</span></p>
+        <button type="button" class="upgrade" onclick="btnClick(1)">Fundraise</button>
+    </div>
+    <div id="production" class="tabcontent">
+        <h3>Here you can allocate your workforce to manufacture all your products</h3>
+        <p>You can't manufacture anything yet!</p>
+    </div>
+
+    <div id="investment" class="tabcontent">
+        <h3>Here you can check up on your investments</h3><p>
+    You have no investments yet!</p>
+    </div>
+
+    <div id="research" class="tabcontent">
+        <h3>Here you can research new products to sell</h3>
+        <p>You can't research anything yet!</p>
+    </div>
+
+    <div id="settings" class="tabcontent">
+        <h3>Here you can change stuff</h3>
+        <form>
+            Company Name:<br>
+            <br>
+            <input type="text" id="companyName" value="mePear Inc." onchange="changeName(this.value)">
+        </form>
+    </div>
+    <script>
+        // Get the element with id="default" and click on it
+        document.getElementById("default").click();
+
+    </script>
+</body>
+
+</html>
