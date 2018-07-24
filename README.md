@@ -1,2 +1,2 @@
-# etothepi.github.io
-Gamedev domain 
+#Corporation idle
+Description coming soon!
