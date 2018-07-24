@@ -1,13 +1,14 @@
 var company = {
-    engCt: 0,
-    mgrCt: 0,
-    proCt: 0,
-    invCt: 0,
     name: "mePear Inc.",
     bday: null,
     balance: 0,
     cash: 0,
-    idlCt: 0
+    idlCt: 0,
+    engCt: 0,
+    mgrCt: 0,
+    proCt: 0,
+    invCt: 0,
+    salCt: 0
 };
 
 function changeName(val) {
@@ -17,7 +18,7 @@ function changeName(val) {
     }
     company.name = val;
     $("#cn").html(company.name);
-}
+};
 
 function openTab(evt, tab) {
     var i, tabcontent, tablinks;
@@ -40,13 +41,16 @@ function btnClick(n) {
     company.cash += n;
     $("#cash").html(company.cash);
     $("#bal").html(company.cash);
-}
+};
 
 function hire(n) {
     company.idlCt += n;
     $("#idlCt").html(company.idlCt);
-    displayButtons();
-}
+    var plus = document.getElementsByClassName("plus")
+    for (var i = 0; i < plus.length; i++) {
+        plus.item(i).style.display = "inline";
+    }
+};
 
 function assign(cat, n) {
     var prop = "" + cat;
@@ -55,25 +59,28 @@ function assign(cat, n) {
     document.getElementById(cat).innerHTML = company[prop];
     $("#idlCt").html(company.idlCt);
     displayButtons();
-}
+};
 
 function displayButtons() {
+    var props = ["engCt", "mgrCt", "proCt", "invCt", "salCt"]
     var plus = document.getElementsByClassName("plus"),
         minus = document.getElementsByClassName("minus");
     if (company.idlCt > 0) {
         for (var i = 0; i < plus.length; i++) {
             plus.item(i).style.display = "inline";
         }
+        for (var i = 0; i < minus.length; i++) {
+            console.log(company[props[i]]);
+            if (company[props[i]] > 0) {
+                minus.item(i).style.display = "inline";
+            } else {
+                minus.item(i).style.display = "none";
+            }
+        }
     } else {
         for (var i = 0; i < plus.length; i++) {
             plus.item(i).style.display = "none";
         }
     }
-    for (var i = 0; i < minus.length; i++) {
-        if (company[i] > 0) {
-            minus.item(i).style.display = "inline";
-        } else {
-            minus.item(i).style.display = "none";
-        }
-    }
-}
+
+};

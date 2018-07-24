@@ -27,13 +27,13 @@
         <h4>Engineers</h4>
         <p><button type="button" class="minus" onclick="assign('engCt',-1)" style="display:none;">-</button> <span id="engCt">0</span> <button type="button" class="plus" onclick="assign('engCt',1)" style="display:none;">+</button></p>
         <h4>Managers</h4>
-        <p id="mgrCt">0</p>
+        <p><button type="button" class="minus" onclick="assign('mgrCt',-1)" style="display:none;">-</button> <span id="mgrCt">0</span> <button type="button" class="plus" onclick="assign('mgrCt',1)" style="display:none;">+</button></p>
         <h4>Programmers</h4>
-        <p id="proCt">0</p>
+        <p><button type="button" class="minus" onclick="assign('proCt',-1)" style="display:none;">-</button> <span id="proCt">0</span> <button type="button" class="plus" onclick="assign('proCt',1)" style="display:none;">+</button></p>
         <h4>Investors</h4>
-        <p id="invCt">0</p>
+        <p><button type="button" class="minus" onclick="assign('invCt',-1)" style="display:none;">-</button> <span id="invCt">0</span> <button type="button" class="plus" onclick="assign('invCt',1)" style="display:none;">+</button></p>
         <h4>Sales associates</h4>
-        <p id="salCt">0</p>
+        <p><button type="button" class="minus" onclick="assign('salCt',-1)" style="display:none;">-</button> <span id="salCt">0</span> <button type="button" class="plus" onclick="assign('salCt',1)" style="display:none;">+</button></p>
     </div>
 
     <div id="overview" class="tabcontent">
@@ -48,8 +48,9 @@
     </div>
 
     <div id="investment" class="tabcontent">
-        <h3>Here you can check up on your investments</h3><p>
-    You have no investments yet!</p>
+        <h3>Here you can check up on your investments</h3>
+        <p>
+            You have no investments yet!</p>
     </div>
 
     <div id="research" class="tabcontent">
@@ -68,7 +69,6 @@
     <script>
         // Get the element with id="default" and click on it
         document.getElementById("default").click();
-
     </script>
 </body>
 
