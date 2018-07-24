@@ -60,15 +60,20 @@ function assign(cat, n) {
 function displayButtons() {
     var plus = document.getElementsByClassName("plus"),
         minus = document.getElementsByClassName("minus");
-    if (company.idlCt > 0)
-        for (var i = 0; i < plus.length; i++)
+    if (company.idlCt > 0) {
+        for (var i = 0; i < plus.length; i++) {
             plus.item(i).style.display = "inline";
-    else
-        for (var i = 0; i < plus.length; i++)
+        }
+    } else {
+        for (var i = 0; i < plus.length; i++) {
             plus.item(i).style.display = "none";
-    for (var i = 0; i < minus.length; i++)
+        }
+    }
+    for (var i = 0; i < minus.length; i++) {
         if (company[i] > 0) {
             minus.item(i).style.display = "inline";
-            else
-                minus.item(i).style.display = "none";
+        } else {
+            minus.item(i).style.display = "none";
         }
+    }
+}
