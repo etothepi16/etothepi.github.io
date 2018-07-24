@@ -78,3 +78,19 @@ input[type=text]:focus {
 .upgrade:hover {
     background-color: #74beec;
 }
+
+
+/* Stle +/- buttons */
+
+.plus {
+    padding: 10px;
+    background-color: #faf6ef;
+    border: 1px solid #cccccc;
+}
+
+.minus {
+    padding: 10px;
+    background-color: #faf6ef;
+    border: 1px solid #cccccc;
+
+}
