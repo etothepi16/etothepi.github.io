@@ -9,7 +9,7 @@ html {
 /* Style the tab */
 
 .tab {
-    overflow: hidden;
+    overflow:hidden;
     border: 5px solid #4d4d4d;
     background-color: inherit;
 }
@@ -20,7 +20,6 @@ html {
     background-color: inherit;
     color: #4d4d4d;
     float: left;
-    border: none;
     outline: none;
     cursor: pointer;
     font-size: 24px;
@@ -29,6 +28,13 @@ html {
     width: 16.66%;
 }
 
+.tablinks {
+  border-right: 5px solid #4d4d4d;
+}
+
+.tablinks:last-child{
+  border-right: none;
+}
 /* Change background color of buttons on hover */
 
 .tab button:hover {
