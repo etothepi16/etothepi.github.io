@@ -24,7 +24,20 @@ export default {
       //TODO: You must construct additional pylons! (make some buildings, etc)
       salary: 1,
       cash: 0,
-      bakeSales: 0
+      bakeSales: 0,
+      yardSales: null,
+      marketStalls: null,
+      onlineStores: null,
+      youTubeChannels: null,
+      viralMarketingCampaigns: null,
+      interns: null,
+      employees: null,
+      llcs: null,
+      brandDeals: null,
+      stockPrice:null,
+      shares:null,
+      subsidiaries:null,
+      contractors: null
     }
   },
   methods:{
