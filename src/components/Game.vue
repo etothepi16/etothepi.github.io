@@ -5,6 +5,13 @@
     <h1>Bake Sales: {{ bakeSales }}</h1>
     <button v-on:click="getCash">Make it rain!</button>
     <button v-on:click="bakeSale">Run a bake sale!</button>
+    <button v-on:click="yardSale">Run a yard sale!</button>
+    <button>Foo</button>
+    <button>Bar</button>
+    <button>Baz</button>
+    <button>Fizz</button>
+    <button>Buzz</button>
+    <button>Bazz</button>
   </div>
 </template>
 
@@ -42,12 +49,17 @@ export default {
       this.cash++;
     },
     bakeSale: function(){
-      this.bakeSales += 1;
+      this.bakeSales++;
       this.cash += (10*this.bakeSales);
+    },
+    yardSale: function(){
+      this.yardSales++;
+      this.cash += (20*this.yardSales);
     },
   //Gameloop
     gameLoop: function(){
       this.bakeSale();
+      this.yardSale();
       //Other building methods once implemented
       //TODO: implement more building-related methods
       //TODO: refactor to have a building manager
@@ -75,5 +87,15 @@ li {
 }
 a {
   color: #42b983;
+}
+#game{
+  display:grid;
+  grid-gap:5px;
+  grid-template-columns: 100px 100px 100px;
+}
+button{
+  border:1px solid #333;
+  padding:10px;
+  font-size:16px;
 }
 </style>
